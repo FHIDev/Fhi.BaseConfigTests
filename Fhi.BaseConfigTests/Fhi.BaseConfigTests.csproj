@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -6,16 +6,33 @@
     <Nullable>enable</Nullable>
     <Version>0.9.0</Version>
     <authors>Folkehelseinstituttet (FHI)</authors>
-    <Copyright>(c) 2022 Folkehelseinstituttet (FHI)</Copyright>
+    <Copyright>©2022 Folkehelseinstituttet (FHI)</Copyright>
+    <PackageCopyright>Copyright ©2022 Folkehelseinstituttet</PackageCopyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <Tags>nunit,unittesting</Tags>
+    <RepositoryUrl>https://github.com/folkehelseinstituttet/Fhi.BaseConfigTests</RepositoryUrl>
+    <PackageDescription>
+      This is a base class for use when testing configurations, or when your tests needs to load configurations.
+    </PackageDescription>
+    <dependencies>
+      <group targetFramework="net6.0">
+      </group>
+    </dependencies>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="..\README.md" Pack="true" PackagePath="\"/>
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="6.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="6.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="6.0.0" />
-    <PackageReference Include="nunit" Version="*" />
+    <PackageReference Include="nunit" Version="3.13.3" />
   </ItemGroup>
 
 </Project>
