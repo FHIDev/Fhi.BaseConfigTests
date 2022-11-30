@@ -1,10 +1,7 @@
-﻿using NUnit.Framework;
+﻿using Microsoft.Extensions.Configuration;
+using NUnit.Framework;
 
-namespace Fhi.BaseConfigTests;
-using System.IO;
-
-using Microsoft.Extensions.Configuration;
-
+namespace Fhi.TestUtilities;
 
 public abstract class BaseConfigTests
 {
