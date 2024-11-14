@@ -4,7 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <Version>1.0.0</Version>
+    <Version>2.0.0</Version>
     <authors>Folkehelseinstituttet (FHI)</authors>
     <Copyright>©2022 Folkehelseinstituttet (FHI)</Copyright>
     <PackageCopyright>Copyright ©2022 Folkehelseinstituttet</PackageCopyright>
@@ -15,10 +15,6 @@
     <PackageDescription>
       This is a base class for use when testing configurations, or when your tests needs to load configurations.
     </PackageDescription>
-    <dependencies>
-      <group targetFramework="net6.0">
-      </group>
-    </dependencies>
     <RootNamespace>Fhi.TestUtilities</RootNamespace>
   </PropertyGroup>
   <PropertyGroup>
