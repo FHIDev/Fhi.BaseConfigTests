@@ -9,6 +9,7 @@
     <Copyright>©2022 Folkehelseinstituttet (FHI)</Copyright>
     <PackageCopyright>Copyright ©2022 Folkehelseinstituttet</PackageCopyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+	<PackageIconUrl>fhi.png</PackageIconUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <Tags>nunit,unittesting</Tags>
     <RepositoryUrl>https://github.com/folkehelseinstituttet/Fhi.BaseConfigTests</RepositoryUrl>
@@ -23,7 +24,8 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="..\README.md" Pack="true" PackagePath="\" />
-    <PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.0" />
+    <None Include="images\fhi.png" Pack="True" PackagePath="\" />
+	<PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="9.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="9.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="9.0.0" />
