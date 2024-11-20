@@ -1,5 +1,6 @@
 ﻿namespace Fhi.TestUtilities.Exceptions
 {
+    [Serializable]
     public class MissingConfigurationException : Exception
     {
         public MissingConfigurationException() { }
