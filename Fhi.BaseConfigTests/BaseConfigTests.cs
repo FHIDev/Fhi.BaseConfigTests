@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using Fhi.TestUtilities.Exceptions;
+using Microsoft.Extensions.Configuration;
 using NUnit.Framework;
 
 namespace Fhi.TestUtilities;
@@ -19,14 +20,12 @@ public abstract class BaseConfigTests
 
     protected BaseConfigTests()
     {
-        
     }
 
     protected BaseConfigTests(string appSettingsSub)
     {
         AppSettingsSub = appSettingsSub;
     }
-
 
     [OneTimeSetUp]
     public void OneTimeInit()
@@ -35,9 +34,10 @@ public abstract class BaseConfigTests
     }
 
     protected T GetConfiguration<T>(string sectionName) where T : class
-    {
-        return Config.GetSection(sectionName).Get<T>();
-    }
+        => Config
+            .GetSection(sectionName)
+            .Get<T>()
+                ?? throw new MissingConfigurationException($"Configuration {typeof(T)} not found.");
 
     protected IConfigurationRoot GetIConfigurationRoot(string outputPath)
     {
