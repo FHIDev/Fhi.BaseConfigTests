@@ -35,9 +35,11 @@ jobs:
 
       - name: Publish nupkg and snupkg to NuGet.org
         run: |
-          foreach($file in (Get-ChildItem package -Recurse -Include *.nupkg)) {
-              dotnet nuget push $file --api-key "${{ secrets.NUGET_ORG_FHI_PUBLISH }}" --source https://api.nuget.org/v3/index.json --skip-duplicate
+          foreach($file in (Get-ChildItem -Path "package" -Recurse -Include "*.nupkg")) {
+              Write-Host "nupkg:: $file.FullName" 
+              dotnet nuget push $file.FullName --api-key "${{ secrets.NUGET_ORG_FHI_PUBLISH }}" --source https://api.nuget.org/v3/index.json --skip-duplicate
           }
-          foreach($file in (Get-ChildItem "package" -Recurse -Include *.snupkg)) {
-              dotnet nuget push $file --api-key "${{ secrets.NUGET_ORG_FHI_PUBLISH }}" --source https://api.nuget.org/v3/index.json --skip-duplicate
+          foreach($file in (Get-ChildItem -Path "package" -Recurse -Include "*.snupkg")) {
+              Write-Host "snupkg:: $file.FullName" 
+              dotnet nuget push $file.FullName --api-key "${{ secrets.NUGET_ORG_FHI_PUBLISH }}" --source https://api.nuget.org/v3/index.json --skip-duplicate
           }
