@@ -4,12 +4,12 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <Version>2.0.2</Version>
+    <Version>2.0.3</Version>
     <authors>Folkehelseinstituttet (FHI)</authors>
     <Copyright>©2022 Folkehelseinstituttet (FHI)</Copyright>
     <PackageCopyright>Copyright ©2022 Folkehelseinstituttet</PackageCopyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageIconUrl>fhi.png</PackageIconUrl>
+    <PackageIcon>fhi.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <Tags>nunit,unittesting</Tags>
     <RepositoryUrl>https://github.com/folkehelseinstituttet/Fhi.BaseConfigTests</RepositoryUrl>
