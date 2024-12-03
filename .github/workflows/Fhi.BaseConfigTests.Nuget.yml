@@ -5,11 +5,9 @@ on:
     branches:
       - main
 
-
 defaults:
   run:
     shell: pwsh
-    working-directory: ./
 
 jobs:
   publish:
@@ -24,22 +22,12 @@ jobs:
           dotnet-version: |
             8.0.x
 
-      - name: Install dependencies
-        run: dotnet restore
-
-      - name: Build
-        run: dotnet build --configuration Release --no-restore --verbosity normal
-
       - name: Pack
-        run: dotnet pack --configuration Release --no-build --output package 
+        run: dotnet pack --output package
 
       - name: Publish nupkg and snupkg to NuGet.org
         run: |
-          foreach($file in (Get-ChildItem -Path "package" -Recurse -Include "*.nupkg")) {
-              Write-Host "nupkg:: $file.FullName" 
-              dotnet nuget push $file.FullName --api-key "${{ secrets.NUGET_ORG_FHI_PUBLISH }}" --source https://api.nuget.org/v3/index.json --skip-duplicate
-          }
-          foreach($file in (Get-ChildItem -Path "package" -Recurse -Include "*.snupkg")) {
-              Write-Host "snupkg:: $file.FullName" 
+          foreach($file in (Get-ChildItem -Path package -Recurse -Include "*.nupkg")) {
+              Write-Host "nupkg:: $file" 
               dotnet nuget push $file.FullName --api-key "${{ secrets.NUGET_ORG_FHI_PUBLISH }}" --source https://api.nuget.org/v3/index.json --skip-duplicate
           }
