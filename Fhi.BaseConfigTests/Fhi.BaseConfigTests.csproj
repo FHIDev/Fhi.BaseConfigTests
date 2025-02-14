@@ -1,27 +1,27 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <Version>2.0.3</Version>
-	<IsPackable>true</IsPackable>
-	<RootNamespace>Fhi.TestUtilities</RootNamespace>
-	<RepositoryUrl>https://github.com/FHIDev/Fhi.BaseConfigTests</RepositoryUrl>
-	<Authors>Folkehelseinstituttet (FHI)</Authors>
+    <IsPackable>true</IsPackable>
+    <RootNamespace>Fhi.TestUtilities</RootNamespace>
+    <RepositoryUrl>https://github.com/FHIDev/Fhi.BaseConfigTests</RepositoryUrl>
+    <Authors>Folkehelseinstituttet (FHI)</Authors>
     <Copyright>Copyright 2022-2025 Folkehelseinstituttet (FHI)</Copyright>
-	<PackageCopyright>Copyright 2022-2025 Folkehelseinstituttet (FHI)</PackageCopyright>
-	<PackageProjectUrl>https://www.nuget.org/packages/Fhi.BaseConfigTests</PackageProjectUrl>
+    <PackageCopyright>Copyright 2022-2025 Folkehelseinstituttet (FHI)</PackageCopyright>
+    <PackageProjectUrl>https://www.nuget.org/packages/Fhi.BaseConfigTests</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIcon>fhi.png</PackageIcon>
-    <PackageReadmeFile>README.md</PackageReadmeFile>    
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageDescription>
       This is a base class for use when testing configurations, or when your tests needs to load configurations.
     </PackageDescription>
-	<IncludeSymbols>true</IncludeSymbols>
-	<SymbolPackageFormat>snupkg</SymbolPackageFormat>
-	<Tags>nunit, unittesting</Tags>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <Tags>nunit, unittesting</Tags>
   </PropertyGroup>
   <ItemGroup>
     <None Include="../README.md" Pack="true" PackagePath="/" />
   </ItemGroup>
-  <ItemGroup>    
+  <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="9.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="9.0.0" />
